@@ -4,9 +4,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view = CountUpDownView
+        self.view = CountUpDownView()
     }
-
-
 }
-
