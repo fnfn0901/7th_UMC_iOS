@@ -10,7 +10,7 @@ import UIKit
 class BaseViewController: UITabBarController {
 
     private let modalVC = ModalViewController()
-    private let navigationVC = NavigationViewController()
+    private let navigationVC = UINavigationController(rootViewController: NavigationViewController())
     
     override func viewDidLoad() {
         super.viewDidLoad()
