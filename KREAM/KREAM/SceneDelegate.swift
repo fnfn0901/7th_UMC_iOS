@@ -12,7 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.frame = UIScreen.main.bounds
 
         // LoginViewController를 루트 뷰 컨트롤러로 설정
-        let loginViewController = BaseViewController()
+        let loginViewController = LoginViewController()
         window?.rootViewController = loginViewController
 
         // 화면에 보이게 설정
