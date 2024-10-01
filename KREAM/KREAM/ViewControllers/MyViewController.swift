@@ -1,12 +1,19 @@
 import UIKit
 
 class MyViewController: UIViewController {
-    
+
+    // MyView 인스턴스 생성
+    let myView = MyView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        let label = UILabel()
-        label.text = "마이 페이지"
-        view.addSubview(label)
+        
+        // MyView를 뷰에 추가
+        view.addSubview(myView)
+        
+        // MyView 레이아웃 설정
+        myView.snp.makeConstraints { make in
+            make.edges.equalToSuperview() // MyView가 전체 화면을 채우도록 설정
+        }
     }
 }
