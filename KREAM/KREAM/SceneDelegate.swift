@@ -13,7 +13,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // LoginViewController를 루트 뷰 컨트롤러로 설정
         let loginViewController = LoginViewController()
-        window?.rootViewController = loginViewController
+        
+        // UINavigationController로 감싸기
+        let navigationController = UINavigationController(rootViewController: loginViewController)
+        window?.rootViewController = navigationController
 
         // 화면에 보이게 설정
         window?.makeKeyAndVisible()
