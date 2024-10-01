@@ -1,12 +1,12 @@
 import UIKit
 
-class HomeViewController: UIViewController {
+class ShopViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         let label = UILabel()
-        label.text = "홈 화면"
+        label.text = "쇼핑 화면"
         view.addSubview(label)
     }
 }
