@@ -21,6 +21,16 @@ class MyViewController: UIViewController {
         myView.manageProfileButton.addTarget(self, action: #selector(goToProfileSettings), for: .touchUpInside)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // MyViewController에 들어왔을 때 항상 네비게이션 바를 숨김
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        // 레이아웃 강제 업데이트
+        view.layoutIfNeeded()
+    }
+
     @objc func goToProfileSettings() {
         // ProfileSettingViewController로 네비게이션 전환
         let profileSettingVC = ProfileSettingViewController()

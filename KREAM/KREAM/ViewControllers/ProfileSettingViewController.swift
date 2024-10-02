@@ -22,16 +22,26 @@ class ProfileSettingViewController: UIViewController {
         setupNavigationBar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // ProfileSettingViewController에 들어왔을 때 네비게이션 바를 보이게 설정
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        
+        // 레이아웃 업데이트 강제 적용
+        view.layoutIfNeeded()
+    }
+    
     // 네비게이션 바 설정
     private func setupNavigationBar() {
         // 네비게이션 바의 배경색 설정
         navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.isTranslucent = true
         
         // 'back_button' 이미지를 커스텀 back button으로 설정
         let backButtonImage = UIImage(named: "back_button")
         let backButton = UIBarButtonItem(image: backButtonImage, style: .plain, target: self, action: #selector(backButtonTapped))
-        backButton.tintColor = .black // 버튼 이미지의 색을 설정
+        backButton.tintColor = .black
         
         // 네비게이션 아이템에 커스텀 back 버튼 추가
         navigationItem.leftBarButtonItem = backButton

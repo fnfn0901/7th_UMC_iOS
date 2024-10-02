@@ -166,11 +166,11 @@ class LoginView: UIView {
         // 오토레이아웃 설정
         NSLayoutConstraint.activate([
             // 로고 이미지뷰 오토레이아웃
+            logoImageView.widthAnchor.constraint(equalToConstant: 287),
+            logoImageView.heightAnchor.constraint(equalToConstant: 75),
+            logoImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             logoImageView.topAnchor.constraint(equalTo: topAnchor, constant: 126),
-            logoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 53),
-            logoImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -53),
-            logoImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -651),
-            
+
             // 이메일 라벨
             emailLabel.topAnchor.constraint(equalTo: topAnchor, constant: 288),
             emailLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 45),
