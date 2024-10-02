@@ -5,18 +5,21 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let homeVC = HomeViewController()
-        let styleVC = StyleViewController()
-        let shopVC = ShopViewController()
-        let savedVC = SavedViewController()
-        let myVC = MyViewController()
+        // 각 뷰 컨트롤러를 네비게이션 컨트롤러로 감싸기
+        let homeVC = UINavigationController(rootViewController: HomeViewController())
+        let styleVC = UINavigationController(rootViewController: StyleViewController())
+        let shopVC = UINavigationController(rootViewController: ShopViewController())
+        let savedVC = UINavigationController(rootViewController: SavedViewController())
+        let myVC = UINavigationController(rootViewController: MyViewController())
         
+        // 탭바 아이템 설정
         homeVC.tabBarItem = UITabBarItem(title: "HOME", image: UIImage(named: "icon_home_fill")?.withRenderingMode(.alwaysOriginal), tag: 0)
         styleVC.tabBarItem = UITabBarItem(title: "STYLE", image: UIImage(named: "icon_style_fill")?.withRenderingMode(.alwaysOriginal), tag: 1)
         shopVC.tabBarItem = UITabBarItem(title: "SHOP", image: UIImage(named: "icon_shop_none")?.withRenderingMode(.alwaysOriginal), tag: 2)
         savedVC.tabBarItem = UITabBarItem(title: "SAVED", image: UIImage(named: "icon_saved_none")?.withRenderingMode(.alwaysOriginal), tag: 3)
         myVC.tabBarItem = UITabBarItem(title: "MY", image: UIImage(named: "icon_my_none")?.withRenderingMode(.alwaysOriginal), tag: 4)
         
+        // 네비게이션 컨트롤러를 탭바 컨트롤러의 뷰 컨트롤러로 설정
         viewControllers = [homeVC, styleVC, shopVC, savedVC, myVC]
         
         addTopBorderToTabBar()
