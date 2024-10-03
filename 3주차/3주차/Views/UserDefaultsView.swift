@@ -62,31 +62,83 @@ class UserDefaultsView: UIView {
         return stackView
     }()
     
-    private func setStackView() {
-        topStackView.addArrangedSubview(titleLabel)
-        topStackView.addArrangedSubview(inputTextField)
-        topStackView.addArrangedSubview(saveButton)
-    }
+    private lazy var subTitleLabel: UILabel = {
+            let label = UILabel()
+            label.font = UIFont.systemFont(ofSize: 20)
+            label.text = "UserDefaults 값 출력 라벨"
+            label.textColor = UIColor.black
+            label.textAlignment = .center
+            return label
+        }()
+        
+        public lazy var showTextValue: UILabel = {
+            let label = UILabel()
+
+            label.font = UIFont.systemFont(ofSize: 20)
+            label.text = "UserDefaults 값이 출력됩니다."
+            label.textColor = UIColor.black
+            label.textAlignment = .center
+            
+            label.layer.borderWidth = 3
+            label.layer.borderColor = UIColor.blue.cgColor
+            label.layer.cornerRadius = 10
+            return label
+        }()
+        
+        private lazy var bottomStackView: UIStackView = {
+            let stackView = UIStackView()
+            stackView.axis = .vertical
+            stackView.distribution = .equalSpacing
+            stackView.alignment = .center
+            stackView.spacing = 21
+            return stackView
+        }()
     
-    private func addViewConstraints() {
-        self.addSubview(topStackView)
-        
-        topStackView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(197)
-            $0.left.equalToSuperview().offset(42)
-            $0.right.equalToSuperview().offset(-42)
+    private func setStackView() {
+            topStackView.addArrangedSubview(titleLabel)
+            topStackView.addArrangedSubview(inputTextField)
+            topStackView.addArrangedSubview(saveButton)
+            
+            bottomStackView.addArrangedSubview(subTitleLabel)
+            bottomStackView.addArrangedSubview(showTextValue)
         }
         
-        inputTextField.snp.makeConstraints{
-            $0.height.equalTo(52)
-            $0.width.equalTo(309)
+        private func addViewConstraints() {
+            self.addSubview(topStackView)
+            self.addSubview(bottomStackView)
+            
+            topStackView.snp.makeConstraints {
+                $0.top.equalToSuperview().offset(197)
+                $0.left.equalToSuperview().offset(42)
+                $0.right.equalToSuperview().offset(-42)
+            }
+            
+            inputTextField.snp.makeConstraints {
+                $0.height.equalTo(52)
+                $0.width.equalTo(309)
+            }
+            
+            saveButton.snp.makeConstraints {
+                $0.height.equalTo(42)
+                $0.width.equalTo(222)
+            }
+            
+            bottomStackView.snp.makeConstraints {
+                $0.top.equalTo(topStackView.snp.bottom).offset(114)
+                $0.left.equalToSuperview().offset(56.5)
+                $0.right.equalToSuperview().offset(-56.5)
+            }
+            
+            subTitleLabel.snp.makeConstraints {
+                $0.width.equalTo(280)
+                $0.height.equalTo(24)
+            }
+            
+            showTextValue.snp.makeConstraints {
+                $0.width.equalTo(280)
+                $0.height.equalTo(172)
+            }
         }
-        
-        saveButton.snp.makeConstraints{
-            $0.height.equalTo(42)
-            $0.width.equalTo(222)
-        }
-    }
     
     
 }
