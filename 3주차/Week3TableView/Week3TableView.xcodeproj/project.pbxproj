@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E2EDD902CAE5B95002D6FCF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5E2EDD8F2CAE5B95002D6FCF /* SnapKit */; };
-		5E2EDD922CAE5B95002D6FCF /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 5E2EDD912CAE5B95002D6FCF /* SnapKit-Dynamic */; };
+		5E2EDD952CAE5C97002D6FCF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5E2EDD942CAE5C97002D6FCF /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5E2EDD762CAE5B7E002D6FCF /* Week3TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week3TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E2EDD762CAE5B7E002D6FCF /* Week3TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Week3TableView.app; path = "/Users/hoyeon/Desktop/7th_UMC_iOS/3주차/Week3TableView/build/Debug-iphoneos/Week3TableView.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -41,8 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E2EDD902CAE5B95002D6FCF /* SnapKit in Frameworks */,
-				5E2EDD922CAE5B95002D6FCF /* SnapKit-Dynamic in Frameworks */,
+				5E2EDD952CAE5C97002D6FCF /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,16 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				5E2EDD782CAE5B7E002D6FCF /* Week3TableView */,
-				5E2EDD772CAE5B7E002D6FCF /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		5E2EDD772CAE5B7E002D6FCF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5E2EDD762CAE5B7E002D6FCF /* Week3TableView.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,8 +74,7 @@
 			);
 			name = Week3TableView;
 			packageProductDependencies = (
-				5E2EDD8F2CAE5B95002D6FCF /* SnapKit */,
-				5E2EDD912CAE5B95002D6FCF /* SnapKit-Dynamic */,
+				5E2EDD942CAE5C97002D6FCF /* SnapKit */,
 			);
 			productName = Week3TableView;
 			productReference = 5E2EDD762CAE5B7E002D6FCF /* Week3TableView.app */;
@@ -117,10 +105,10 @@
 			mainGroup = 5E2EDD6D2CAE5B7E002D6FCF;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				5E2EDD8E2CAE5B95002D6FCF /* XCRemoteSwiftPackageReference "SnapKit" */,
+				5E2EDD932CAE5C97002D6FCF /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 5E2EDD772CAE5B7E002D6FCF /* Products */;
+			productRefGroup = 5E2EDD6D2CAE5B7E002D6FCF;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -162,7 +150,6 @@
 				INFOPLIST_FILE = Week3TableView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -194,7 +181,6 @@
 				INFOPLIST_FILE = Week3TableView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -357,7 +343,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5E2EDD8E2CAE5B95002D6FCF /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		5E2EDD932CAE5C97002D6FCF /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
@@ -368,15 +354,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5E2EDD8F2CAE5B95002D6FCF /* SnapKit */ = {
+		5E2EDD942CAE5C97002D6FCF /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5E2EDD8E2CAE5B95002D6FCF /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 5E2EDD932CAE5C97002D6FCF /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		5E2EDD912CAE5B95002D6FCF /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5E2EDD8E2CAE5B95002D6FCF /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
