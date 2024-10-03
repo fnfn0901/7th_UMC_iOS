@@ -22,6 +22,9 @@ class MainTabBarController: UITabBarController {
         // 네비게이션 컨트롤러를 탭바 컨트롤러의 뷰 컨트롤러로 설정
         viewControllers = [homeVC, styleVC, shopVC, savedVC, myVC]
         
+        tabBar.barTintColor = .white
+        tabBar.isTranslucent = false
+        
         addTopBorderToTabBar()
     }
     
