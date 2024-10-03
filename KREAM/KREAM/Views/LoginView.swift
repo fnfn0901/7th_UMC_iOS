@@ -3,7 +3,7 @@ import UIKit
 class LoginView: UIView {
     
     // 로고 이미지뷰
-    private let logoImageView: UIImageView = {
+    let logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "logo") // 로고 이미지
         imageView.contentMode = .scaleAspectFit
@@ -12,7 +12,7 @@ class LoginView: UIView {
     }()
 
     // 이메일 라벨
-    private let emailLabel: UILabel = {
+    let emailLabel: UILabel = {
         let label = UILabel()
         label.text = "이메일 주소"
         label.font = UIFont(name: "Inter", size: 12)
@@ -23,7 +23,7 @@ class LoginView: UIView {
     }()
     
     // 이메일 입력란
-    private let emailTextField: UITextField = {
+    let emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "예) kream@kream.co.kr"
         textField.font = UIFont(name: "Inter", size: 12)
@@ -40,7 +40,7 @@ class LoginView: UIView {
     }()
     
     // 비밀번호 라벨
-    private let passwordLabel: UILabel = {
+    let passwordLabel: UILabel = {
         let label = UILabel()
         label.text = "비밀번호"
         label.font = UIFont(name: "Inter", size: 12)
@@ -51,7 +51,7 @@ class LoginView: UIView {
     }()
     
     // 비밀번호 입력란
-    private let passwordTextField: UITextField = {
+    let passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "비밀번호를 입력해주세요"
         textField.font = UIFont(name: "Inter", size: 12)
@@ -81,7 +81,7 @@ class LoginView: UIView {
     }()
     
     // 카카오 로그인 버튼
-    private let kakaoButton: UIButton = {
+    let kakaoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("카카오 로그인", for: .normal)
         button.titleLabel?.font = UIFont(name: "Inter", size: 13)
@@ -110,7 +110,7 @@ class LoginView: UIView {
     }()
     
     // 애플 로그인 버튼
-    private let appleButton: UIButton = {
+    let appleButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Apple 로그인", for: .normal)
         button.titleLabel?.font = UIFont(name: "Inter", size: 13)
