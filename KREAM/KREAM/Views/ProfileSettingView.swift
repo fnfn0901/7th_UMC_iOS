@@ -37,7 +37,6 @@ class ProfileSettingView: UIView {
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.setLeftPaddingPoints(11)
         
-        // 사용자 인터페이스 스타일 강제 설정
         if #available(iOS 13.0, *) {
             textField.overrideUserInterfaceStyle = .light
         }
@@ -76,13 +75,11 @@ class ProfileSettingView: UIView {
         textField.isUserInteractionEnabled = false
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.setLeftPaddingPoints(11)
-
-        // 사용자 인터페이스 스타일 강제 설정
+        
         if #available(iOS 13.0, *) {
             textField.overrideUserInterfaceStyle = .light
         }
-
-        // placeholder 텍스트 색상을 검정으로 설정
+        
         textField.attributedPlaceholder = NSAttributedString(
             string: "******************",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.black]
@@ -156,68 +153,35 @@ class ProfileSettingView: UIView {
     }
     
     private func setupActions() {
+        // 이메일 변경 버튼에 액션 추가
         changeEmailButton.addTarget(self, action: #selector(handleChangeEmail), for: .touchUpInside)
+        // 비밀번호 변경 버튼에 액션 추가
         changePasswordButton.addTarget(self, action: #selector(handleChangePassword), for: .touchUpInside)
     }
-
-    @objc private func handleChangeEmail() {
+    
+    @objc func handleChangeEmail() {
+        print("handleChangeEmail called")  // 디버깅용
         if isEmailEditable {
             emailTextField.isUserInteractionEnabled = false
-            emailTextField.textColor = .black
-            emailTextField.font = UIFont(name: "Pretendard", size: 14)
-            emailTextField.attributedPlaceholder = NSAttributedString(
-                string: "example@naver.com",
-                attributes: [NSAttributedString.Key.foregroundColor: UIColor.black]
-            )
             changeEmailButton.setTitle("변경", for: .normal)
-            changeEmailButton.backgroundColor = .clear
-            changeEmailButton.setTitleColor(.black, for: .normal)
         } else {
             emailTextField.isUserInteractionEnabled = true
-            emailTextField.textColor = .black
-            emailTextField.font = UIFont.systemFont(ofSize: 14)
-            emailTextField.attributedPlaceholder = NSAttributedString(
-                string: "새로운 이메일을 입력해주세요!",
-                attributes: [NSAttributedString.Key.foregroundColor: UIColor.black]
-            )
             changeEmailButton.setTitle("확인", for: .normal)
-            changeEmailButton.setTitleColor(.black, for: .normal)
-            changeEmailButton.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         }
         isEmailEditable.toggle()
+        print("isEmailEditable: \(isEmailEditable)")
     }
-
-    @objc private func handleChangePassword() {
+    
+    @objc func handleChangePassword() {
+        print("handleChangePassword called")  // 디버깅용
         if isPasswordEditable {
             passwordTextField.isUserInteractionEnabled = false
-            passwordTextField.textColor = .black
-            passwordTextField.attributedPlaceholder = NSAttributedString(
-                string: "******************",
-                attributes: [NSAttributedString.Key.foregroundColor: UIColor.black]
-            )
             changePasswordButton.setTitle("변경", for: .normal)
-            changePasswordButton.backgroundColor = .clear
-            changePasswordButton.setTitleColor(.black, for: .normal)
         } else {
             passwordTextField.isUserInteractionEnabled = true
-            passwordTextField.textColor = .black
-            passwordTextField.font = UIFont.systemFont(ofSize: 14)
-            passwordTextField.attributedPlaceholder = NSAttributedString(
-                string: "새로운 비밀번호를 입력해주세요!",
-                attributes: [NSAttributedString.Key.foregroundColor: UIColor.black]
-            )
             changePasswordButton.setTitle("확인", for: .normal)
-            changePasswordButton.setTitleColor(.black, for: .normal)
-            changePasswordButton.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         }
         isPasswordEditable.toggle()
-    }
-}
-
-extension UITextField {
-    func setLeftPaddingPoints(_ amount: CGFloat) {
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.height))
-        self.leftView = paddingView
-        self.leftViewMode = .always
+        print("isPasswordEditable: \(isPasswordEditable)")
     }
 }

@@ -18,4 +18,10 @@ struct User {
         }
         return nil
     }
+    
+    // UserDefaults에서 유저 정보 삭제
+    static func clearUserDefaults() {
+        UserDefaults.standard.removeObject(forKey: "userId")
+        UserDefaults.standard.removeObject(forKey: "userPwd")
+    }
 }
